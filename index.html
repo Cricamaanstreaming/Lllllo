@@ -1,0 +1,43 @@
+const playerInstance = jwplayer("player").setup({
+    controls: true,
+    displaytitle: true,
+    autoplay: true,
+    displaydescription: true,
+    abouttext: "Video Player By CricHype",
+    aboutlink: "https://telegram.me/CricHype",
+    skin: {
+        name: "netflix"
+    },
+    logo: {
+        file: "https://cxh.pages.dev/CXH.png",
+        link: "https://telegram.me/CricHype"
+    },
+    captions: {
+        color: "#FFF",
+        fontSize: 14,
+        backgroundOpacity: 0,
+        edgeStyle: "raised"
+    },
+    playlist: [
+        {
+            image: "",
+            sources: [
+                {
+                    file: "https://cdn.troya.one/ch1988/mono.m3u8?token=rl_aadam.UdI0zA87jcz080oIulX2iCpFZbpMMqq-6-4vFTZzyqSBH3QV-i0fbkSlM6VW0S_5", // Tokenized M3U8 URL
+                    type: "hls",
+                    label: "1080p",
+                    default: true
+                }
+            ]
+        }
+    ],
+    advertising: {
+        client: "vast",
+        schedule: [
+            {
+                offset: "pre",
+                tag: ""
+            }
+        ]
+    }
+});
